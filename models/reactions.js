@@ -1,25 +1,32 @@
-const {Schema, model} = require("mongoose");
+const { Schema, model } = require("mongoose");
+const {format} = require('date-fns');
 
-const reactionSchema = new Schema(
-    {
-    reactionId: {
-        type:Schema.Types.ObjectId,
-        default: new Schema.Types.ObjectId() 
+const reactionSchema = new Schema({
+  reactionId: {
+    type: Schema.Types.ObjectId,
+    default: new Schema.Types.ObjectId(),
+  },
+  reationBody: {
+    type: String,
+    required: true,
+    maxLength: 280,
+  },
+  username: {
+    type: String,
+    required: true,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now(),
+    get: (timestamp) => format(timestamp, "dd/MM/yyyy HH:mm:ss"),
+  },
+},
+{
+    toJSON: {
+      virtuals: true,
+      getters: true,
     },
-    reationBody: {
-        type:String,
-        required:true,
-        maxLength: 280,
-    },
-    username: {
-        type:String,
-        required: true,
-    },
-    createdAt:{
-       type: Date,
-       default: Date.now(),
-    //    getter method
-    }
-
-})
-module.exports = reactionSchema
+    id: false,
+  }
+);
+module.exports = reactionSchema;
