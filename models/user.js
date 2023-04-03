@@ -13,7 +13,7 @@ const userSchema = new Schema({
     unique: true,
     match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/],
   },
-  toughts: [
+  thoughts: [
     {
       type: Schema.Types.ObjectId,
       ref: "Thought",
