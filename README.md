@@ -25,7 +25,7 @@ open the root integrated terminal in vs code and run nodemon index
 
 
 ## Contributors <a id="contributors"></a>
-Patrick Ingram
+Patrick Ingram, Tutor John 
 
 ## LICENSE <a id="license"></a>
 Eclipse Public License 1.0
@@ -37,4 +37,3 @@ Everyone is permitted to copy and distribute copies of this Agreement, but in or
 
   ## Live video link:
   https://drive.google.com/file/d/1YTRlg4-_ho_CWh9okuYc2G6q8HU61I4A/view
-  
